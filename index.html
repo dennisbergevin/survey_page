@@ -9,20 +9,23 @@
 <body>
     <h1 id="title">Survey Form</h1>
     <p id="description">Thank you for taking the time to help us out!</p>
-    <form id="survey-form">
-        <label id="name-label">
-        <h3>Name</h3>
-        </label>
-        <input id="name" type="text" placeholder="Enter your name" required>
-        <label id="email-label">
-        <h3>Email</h3>
-        </label>
-        <input id="email" type="email" placeholder="Enter your email" required>
-        <label id="number-label">
-        <h3>Age (optional)</h3>
-        </label>
-        <input id="number" type="number" placeholder="Age" min="0" max="110">
-        <h3>State</h3>
+<div class="container">
+<form id="survey-form">
+     <ul class="flex-outer">
+        <li>
+            <label id="name-label">Name</label>
+            <input id="name" type="text" placeholder="Enter your name" required>
+        </li>
+        <li>
+            <label id="email-label">Email</label>
+            <input id="email" type="email" placeholder="Enter your email" required>
+        </li>
+        <li>
+            <label id="number-label">Age (optional)</label>
+            <input id="number" type="number" placeholder="Age" min="0" max="110">
+        </li>
+        <li>
+        <label id="dropdown">State</label>
         <select id="dropdown" required>
             <option value="">Select your state</option>
             <option value="Alabama">Alabama</option>
@@ -76,38 +79,54 @@
             <option value="Wisconsin">Wisconsin</option>
             <option value="Wyoming">Wyoming</option>   
         </select>
-        <h3>Do you drink coffee?</h3>
+        </li>
+        <li>
+            <p>Drink coffee?</p>
+            <ul class="flex-inner">
+        </li>
         <label for="coffee">
-            <input id="coffee" type="radio" name="coffee" value="1">Yes
+            <li>
+                <label for="yes">Yes</label>
+                <input id="coffee" type="radio" name="coffee" value="1">
+            </li>
         </label>
         <br>
         <label for="coffee">
-            <input id="coffee" type="radio" name="coffee" value="2">No
+            <li>
+                <label for="no">No</label>
+                <input id="coffee" type="radio" name="coffee" value="2">
+            </li>
         </label>
-        <h3>Which Superhero would you be?</h3>
-        <label for="hero">
-            <input type="checkbox" id="hero" name="superman" value="1">Superman
-        </label>
-        <br>
-        <label for="hero">
-            <input type="checkbox" id="hero" name="batman" value="2">Batman
-        </label>
-        <br>
-        <label for="hero">
-            <input type="checkbox" id="hero" name="incredible hulk" value="3">Incredible Hulk
-        </label>
-        <br>
-        <label for="hero">
-            <input type="checkbox" id="hero" name="ironman" value="4">Ironman
-        </label>
-        <br>
-        <label for="hero">
-            <input type="checkbox" id="food" name="none" value="5">None of the above
-        </label>
-        <h3>Comments</h3>
-        <label for="comments"></label>
-        <textarea id="comments" name="comments" row="6" cols="50" placeholder="Enter any comments"></textarea>
-        <button type="submit" id="submit" value="Submit">Submit</button>
-    </form>
+        </ul>
+        <li>
+            <p>When are you most alert?</p>
+            <ul class="flex-inner">
+            <li>
+                <label for="morning">Morning</label>
+                <input type="checkbox" id="time" name="morning" value="1">
+            </li>
+            <li>
+                <label for="midday">Midday</label>
+                <input type="checkbox" id="time" name="midday" value="2">
+            </li>
+            <li>
+                <label for="evening">Evening</label>
+                <input type="checkbox" id="time" name="evening" value="3">
+            </li>
+        </ul>
+        </li>
+        <ul class="flex-outer">
+        <li>
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments" row="6" cols="70" placeholder="Enter any comments"></textarea>  
+        </li>    
+        </ul>
+        </li>
+        <li>
+            <button type="submit" id="submit" value="Submit">Submit</button>
+        </li>
+     </ul>
+</form>
+</div> 
 </body>
 </html>
